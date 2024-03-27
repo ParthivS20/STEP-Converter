@@ -1,5 +1,10 @@
-name: STEP Converter asdasd
+name: step-converter
 description: Takes a STEP File and outputs alternate formats
+author: Parthiv Shah
+branding:
+  icon: 'check'
+  color: 'blue'
+  
 inputs:
   step-file:
     required: true
@@ -18,7 +23,3 @@ runs:
         id: convert-file
         run: ${{ github.action_path }}/converter.sh "${{ github.action_path }}/mayo-config.ini" "${{ inputs.step-file }}" "${{ inputs.out-file }}"
         shell: bash
-
-branding:
-  icon: 'check'
-  color: 'blue'
