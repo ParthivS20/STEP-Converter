@@ -17,7 +17,7 @@ inputs:
     required: true
 
 runs:
-  using: "composite"
+  using: composite
     steps:
       - name: Convert STEP
         id: convert-file
