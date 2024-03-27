@@ -17,3 +17,7 @@ runs:
         id: convert-file
         run: ${{ github.action_path }}/converter.sh "${{ github.action_path }}/mayo-config.ini" "${{ inputs.step-file }}" "${{ inputs.out-file }}"
         shell: bash
+
+branding:
+  icon: 'check'
+  color: 'blue'
