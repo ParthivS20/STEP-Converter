@@ -1,4 +1,5 @@
 name: STEP Converter asdasd
+description: Takes a STEP File and outputs alternate formats
 inputs:
   step-file:
     required: true
