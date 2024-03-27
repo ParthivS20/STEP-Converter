@@ -18,8 +18,8 @@ inputs:
 
 runs:
   using: composite
-    steps:
-      - name: Convert STEP
-        id: convert-file
-        run: ${{ github.action_path }}/converter.sh "${{ github.action_path }}/mayo-config.ini" "${{ inputs.step-file }}" "${{ inputs.out-file }}"
-        shell: bash
+  steps:
+    - name: Convert STEP
+      id: convert-file
+      run: ${{ github.action_path }}/converter.sh "${{ github.action_path }}/mayo-config.ini" "${{ inputs.step-file }}" "${{ inputs.out-file }}"
+      shell: bash
