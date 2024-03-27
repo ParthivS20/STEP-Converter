@@ -1,4 +1,4 @@
-name: STEP Converter
+name: STEP Converter asdasd
 inputs:
   step-file:
     required: true
