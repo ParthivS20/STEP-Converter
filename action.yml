@@ -2,7 +2,7 @@ name: kicad-exporter
 description: Takes a STEP File and outputs alternate formats
 author: Parthiv Shah
 branding:
-  icon: 'check'
+  icon: 'code'
   color: 'blue'
   
 inputs:
