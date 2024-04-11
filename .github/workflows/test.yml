@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: parthivs20/kicad-exporter@v1.0
+      - uses: parthivs20/kicad-exporter@v1
         with:
           out-files: |
             sch_pdf
