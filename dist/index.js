@@ -30,4 +30,3 @@ if (!fs.existsSync('docs')) {
 }
 const outFiles = (0, core_1.getInput)('out-files', { required: true }).split(/\r\n|\r|\n/g);
 console.log(outFiles);
-//# sourceMappingURL=index.js.map
