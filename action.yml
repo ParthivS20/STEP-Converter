@@ -1,4 +1,4 @@
-name: step-converter
+name: kicad-exporter
 description: Takes a STEP File and outputs alternate formats
 author: Parthiv Shah
 branding:
