@@ -2,10 +2,10 @@
   "name": "kicad-exporter",
   "version": "1.0.0",
   "description": "Export KiCad 7.0 files to various formats",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "start": "tsc && node dist/index.js",
-    "build": "tsc",
+    "build": "ncc build src/main.ts -m -o dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Parthiv Shah",
@@ -25,6 +25,7 @@
     "globals": "^15.0.0",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.6.0",
-    "@types/node": "^20.12.7"
+    "@types/node": "^20.12.7",
+    "@vercel/ncc": "^0.38.1"
   }
 }
