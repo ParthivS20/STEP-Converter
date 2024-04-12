@@ -14,6 +14,8 @@ const outFiles = process.argv[2].split(/\r\n|\r|\n/g)
 const outDir = process.argv[3]
 const ACTION_PATH = process.argv[4]
 
+console.log(outFiles);
+console.log(outDir);
 console.log(ACTION_PATH);
 
 (async () => {
