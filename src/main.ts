@@ -45,8 +45,6 @@ console.log(ACTION_PATH);
     }
 
     let mainDirFiles = fs.readdirSync('./')
-    console.log(mainDirFiles)
-    //let outDirFiles = fs.readdirSync(outDir)
 
     mainDirFiles.forEach(fileName => {
         if (fileName.endsWith("kicad_sch")) {
