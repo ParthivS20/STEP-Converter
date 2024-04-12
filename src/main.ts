@@ -23,7 +23,7 @@ const outDir = getInput('out-dir', { required: true });
     })
 
     if (needMayo) {
-        await exec('sh', [`bin/install-mayo.sh`]).then(() => {
+        await exec('sh', [`${ACTION_PATH}/bin/install-mayo.sh`]).then(() => {
                 console.log("mayo installed")
             }).catch((error) => {
                 console.error("mayo install failed")
