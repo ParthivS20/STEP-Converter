@@ -28,4 +28,4 @@ runs:
     - shell: bash
       run: |
         cd ${{ github.action_path }}
-        node dist/index.js ${{ inputs.outFiles }} ${{ inputs.outDir }} ${{ github.action_path }}
+        node dist/index.js "${{ inputs.outFiles }}" "${{ inputs.outDir }}" "${{ github.action_path }}"
