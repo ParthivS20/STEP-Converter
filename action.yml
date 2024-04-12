@@ -22,6 +22,10 @@ inputs:
     required: false
     default: './'
 
+  in-dir:
+    description: 'KiCad 7.0 project file (.pro)'
+    required: true
+
 runs:
   using: 'node20'
   main: 'dist/index.js'

@@ -19,3 +19,4 @@ jobs:
             png
             stl
             step
+          in-dir: './docs'

@@ -6,6 +6,7 @@ const FORMATS = ['sch_pdf', 'pcb_pdf', 'png', 'stl', 'step']
 
 const outFiles = getInput('out-files', { required: true }).split(/\r\n|\r|\n/g)
 const outDir = getInput('out-dir', { required: true });
+const inDir = getInput('in-dir', { required: true });
 
 console.log(1);
 (async () => {
@@ -45,6 +46,11 @@ console.log(1);
     })
 
     console.log(6);
+
+    fs.readdirSync(inDir).forEach(file => {
+        //if the file is not in the outFiles array, delete it
+        console.log(file)
+    })
 })()
 
 
