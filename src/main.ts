@@ -36,13 +36,14 @@ const outDir = getInput('out-dir', { required: true });
     }
 
     let mainDirFiles = fs.readdirSync('./')
+    console.log(mainDirFiles)
     //let outDirFiles = fs.readdirSync(outDir)
 
     mainDirFiles.forEach(fileName => {
-        if (fileName.endsWith(".kicad_sch")) {
+        if (fileName.endsWith("kicad_sch")) {
             let basename = fileName.replace(".kicad_sch", "")
 
-        } else if (fileName.endsWith(".kicad_pcb")) {
+        } else if (fileName.endsWith("kicad_pcb")) {
             let basename = fileName.replace(".kicad_pcb", "")
             if (outFiles.includes("step")) {
                 exec('kicad-cli', ['pcb', 'export', 'step', '--subst-models', `-o ${outDir}/${basename}.step`, fileName]).then(() => {
