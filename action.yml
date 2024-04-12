@@ -17,6 +17,11 @@ inputs:
 
     required: true
 
+  out-dir:
+    description: 'Output directory for the exported files'
+    required: false
+    default: './'
+
 runs:
   using: 'node20'
   main: 'dist/index.js'
