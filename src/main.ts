@@ -2,7 +2,7 @@ import { getInput } from '@actions/core'
 import { exec } from '@actions/exec'
 import * as fs from 'fs'
 
-const ACTION_PATH = process.argv[2]
+const ACTION_PATH = "2"
 
 const FORMATS = ['sch_pdf', 'pcb_pdf', 'png', 'stl', 'step']
 
