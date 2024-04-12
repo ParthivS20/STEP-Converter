@@ -20,7 +20,7 @@ inputs:
   out-dir:
     description: 'Output directory for the exported files'
     required: false
-    default: ''
+    default: './'
 
 runs:
   using: 'node20'
