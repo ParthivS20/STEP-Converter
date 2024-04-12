@@ -4,10 +4,17 @@ import * as fs from 'fs'
 
 const FORMATS = ['sch_pdf', 'pcb_pdf', 'png', 'stl', 'step']
 
+/*
 const outFiles = getInput('out-files', { required: true }).split(/\r\n|\r|\n/g)
 const outDir = getInput('out-dir', { required: true })
 const ACTION_PATH = getInput('action-path', { required: true })
-console.log(`ACTION_PATH: ${ACTION_PATH}`);
+*/
+
+const outFiles = process.argv[2].split(/\r\n|\r|\n/g)
+const outDir = process.argv[3]
+const ACTION_PATH = process.argv[4]
+
+console.log(ACTION_PATH);
 
 (async () => {
     let needMayo = false

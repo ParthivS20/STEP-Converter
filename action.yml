@@ -22,11 +22,10 @@ inputs:
     required: false
     default: './'
 
-  action-path:
-    description: 'Path to the action'
-    required: false
-    default: 'a'
-
 runs:
-  using: 'node20'
-  main: 'dist/index.js'
+  using: 'composite'
+  steps:
+    - shell: bash
+      run: |
+        cd ${{ github.action-path }}
+        node dist/index.js ${{ inputs.outFiles }} ${{ inputs.outDir }} ${{ github.action_path }}
