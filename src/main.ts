@@ -6,14 +6,21 @@ const FORMATS = ['sch_pdf', 'pcb_pdf', 'png', 'stl', 'step']
 
 const outFiles = getInput('out-files', { required: true }).split(/\r\n|\r|\n/g)
 
+let needMayo = false
+
 outFiles.forEach((file) => {
   if (!FORMATS.includes(file)) {
     throw new Error(`Invalid out-file: ${file}`)
   }
 
-  if (file === 'step' || file === 'stl' || file === 'png') {
-    exec(`mayo.sh`)
-    console.log("mayo installed")
+  if (!needMayo && (file === 'step' || file === 'stl' || file === 'png')) {
+    needMayo = true
+    exec(`mayo.sh`).then(() => {
+        console.log("mayo installed")
+    }).catch((error) => {
+        console.error("mayo failed")
+        throw error
+    })
   }
 })
 
