@@ -27,5 +27,4 @@ runs:
   steps:
     - shell: bash
       run: |
-        cd ${{ github.action_path }}
-        node dist/index.js "${{ inputs.out-files }}" "${{ inputs.out-dir }}" "${{ github.action_path }}"
+        node ${{ github.action_path }}/dist/index.js "${{ inputs.out-files }}" "${{ inputs.out-dir }}" "${{ github.action_path }}"
