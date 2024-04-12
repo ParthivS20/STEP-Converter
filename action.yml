@@ -23,9 +23,5 @@ inputs:
     default: './'
 
 runs:
-  using: 'composite'
-  steps:
-    - run: |
-        export ACTION_PATH="${{ github.action_path }}"
-        node "${{ github.action_path }}/dist/index.js"
-      shell: bash
+  using: 'node20'
+  main: 'dist/index.js'
