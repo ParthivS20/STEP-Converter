@@ -15,7 +15,7 @@ outFiles.forEach((file) => {
 
   if (!needMayo && (file === 'step' || file === 'stl' || file === 'png')) {
     needMayo = true
-    exec('sh', [`mayo.sh`]).then(() => {
+    exec('sh', [`bin/install-mayo.sh`]).then(() => {
         console.log("mayo installed")
     }).catch((error) => {
         console.error("mayo failed")
