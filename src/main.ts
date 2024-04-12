@@ -20,9 +20,10 @@ console.log(ACTION_PATH);
 
 (async () => {
     let needMayo = false
-    outFiles.forEach((file) => {
+    outFiles.forEach((file, i) => {
         if (!FORMATS.includes(file)) {
-            throw new Error(`Invalid out-file: ${file}`)
+            console.error(`Invalid out-file: ${file}`)
+            outFiles.splice(i, 1)
         }
 
         if (!needMayo && (file === 'step' || file === 'stl' || file === 'png')) {
