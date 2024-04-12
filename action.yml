@@ -26,5 +26,5 @@ runs:
   using: 'composite'
   steps:
     - run: |
-        node ${{ github.action_path }}/dist/index.js "${{ github.action_path }}"
+        node "${{ github.action_path }}/dist/index.js" "${{ github.action_path }}"
       shell: bash
