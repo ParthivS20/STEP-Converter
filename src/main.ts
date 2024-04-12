@@ -2,9 +2,10 @@ import { getInput } from '@actions/core'
 import { exec } from '@actions/exec'
 import * as fs from 'fs'
 
-const ACTION_PATH = getInput('action-path', { required: true })
-
 const FORMATS = ['sch_pdf', 'pcb_pdf', 'png', 'stl', 'step']
+
+const ACTION_PATH = getInput('action-path', { required: true })
+console.log(`ACTION_PATH: ${ACTION_PATH}`)
 
 const outFiles = getInput('out-files', { required: true }).split(/\r\n|\r|\n/g)
 const outDir = getInput('out-dir', { required: true });
