@@ -22,6 +22,11 @@ inputs:
     required: false
     default: './'
 
+  action-path:
+    description: 'Path to the action'
+    required: false
+    default: '${{ githib.action_path }}'
+
 runs:
   using: 'node20'
   main: 'dist/index.js'

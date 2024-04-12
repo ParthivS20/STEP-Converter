@@ -1,12 +1,8 @@
 import { getInput } from '@actions/core'
 import { exec } from '@actions/exec'
-import { context } from '@actions/github'
 import * as fs from 'fs'
 
-const ACTION_PATH = context
-
-console.log(context)
-
+const ACTION_PATH = getInput('action-path', { required: true })
 
 const FORMATS = ['sch_pdf', 'pcb_pdf', 'png', 'stl', 'step']
 
