@@ -25,7 +25,7 @@ inputs:
   action-path:
     description: 'Path to the action'
     required: false
-    default: '${{ github.action_path }}'
+    default: 'a'
 
 runs:
   using: 'node20'

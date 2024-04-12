@@ -2,7 +2,6 @@ import { getInput } from '@actions/core'
 import { exec } from '@actions/exec'
 import * as fs from 'fs'
 
-console.log(1)
 const FORMATS = ['sch_pdf', 'pcb_pdf', 'png', 'stl', 'step']
 
 const outFiles = getInput('out-files', { required: true }).split(/\r\n|\r|\n/g)
