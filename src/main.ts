@@ -53,7 +53,7 @@ console.log(ACTION_PATH);
         } else if (fileName.endsWith("kicad_pcb")) {
             let basename = fileName.replace(".kicad_pcb", "")
             if (outFiles.includes("step")) {
-                exec('kicad-cli', ['pcb', 'export', 'step', '--subst-models', `-o "${outDir}/${basename}.step"`, `"${fileName}"`]).then(() => {
+                exec('kicad-cli', ['pcb', 'export', 'step', '--subst-models', `--output "${outDir}/${basename}.step"`, `"${fileName}"`]).then(() => {
                     console.log(`STEP export success: ${fileName}`)
                 }).catch((error) => {
                     console.error("step export failed")
