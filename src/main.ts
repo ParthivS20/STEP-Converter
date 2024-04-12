@@ -2,18 +2,15 @@ import { getInput } from '@actions/core'
 import { exec } from '@actions/exec'
 import * as fs from 'fs'
 
-const ACTION_PATH = process.argv[2]
-console.log(ACTION_PATH)
+const ACTION_PATH = process.env.ACTION_PATH
 
 const FORMATS = ['sch_pdf', 'pcb_pdf', 'png', 'stl', 'step']
 
 const outFiles = getInput('out-files', { required: true }).split(/\r\n|\r|\n/g)
 const outDir = getInput('out-dir', { required: true });
-console.log(1);
 
 (async () => {
     let needMayo = false
-    console.log(2);
     outFiles.forEach((file) => {
         if (!FORMATS.includes(file)) {
             throw new Error(`Invalid out-file: ${file}`)

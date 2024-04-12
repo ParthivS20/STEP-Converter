@@ -25,5 +25,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: node --version
+    - run: |
+        export ACTION_PATH="${{ github.action_path }}"
+        node "${{ github.action_path }}/dist/index.js"
       shell: bash
